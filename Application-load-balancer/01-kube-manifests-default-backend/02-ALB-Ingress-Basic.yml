@@ -20,6 +20,7 @@ metadata:
     alb.ingress.kubernetes.io/success-codes: '200'
     alb.ingress.kubernetes.io/healthy-threshold-count: '2'
     alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
+    alb.ingress.kubernetes.io/subnets: subnet-052b2c0fbbfae327e,subnet-00fbb91dda87fea8f
 spec:
   ingressClassName: my-aws-ingress-class # Ingress Class
   defaultBackend:

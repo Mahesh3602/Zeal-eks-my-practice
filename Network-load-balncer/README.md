@@ -35,13 +35,11 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
   --set serviceAccount.create=false \
   --set serviceAccount.name=aws-load-balancer-controller \
   --set region=us-east-1 \
-  --set vpcId=vpc-0d6b92b118e7d99a6 \
+  --set vpcId=vpc-0581db1b5c47442ff \
   --set image.repository=602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-load-balancer-controller
 
-## step -5 : install ingress class
-cd lb & kubectl apply -f lb/
+## step -5 : change subnet ids from AWS in load-balancer-service yaml
 
-## step - 6 : add subnet annotation
 
-## step - 7 : install backend deployments
-kubectl apply -f 01-kube-manifests-default-backend/
+## step - 6 : install backend deployments
+kubectl apply -f kube-manifests/
